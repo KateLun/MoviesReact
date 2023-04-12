@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+.input {
+    flex-grow: 2;
+    border: none;
+    padding: 5px 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.input:focus {
+    outline: none;
+}
+.form:focus-within { 
+    outline: 2px solid rgb(255, 185, 1);
+}
+button { /*ВЫНЕСТИ В КОМПОНЕНТ КНОПКИ*/
+    border:1px solid rgb(255, 185, 1);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgb(255, 185, 1);
+    color: rgb(28, 37, 32);
+    padding: 0 15px;
+}
+.bg-main {
+    background-color: rgba(255, 226, 200, 0.1);
+    height: 100vh;
+}
+.result-text {
+    font-size: larger;
+    color: rgb(20, 78, 90);
+    }
+.inp-val {  
+    font-size: larger;
+    color: rgb(255, 185, 1);
+}
