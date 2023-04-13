@@ -12,7 +12,7 @@ function Form( ) {
 
     async function showMovies(e) {
         e.preventDefault()
-        
+        if (movie) {
         const options = {
             method: 'GET',
             headers: {
@@ -24,18 +24,22 @@ function Form( ) {
         const response = await fetch(`https://moviesdb5.p.rapidapi.com/om?s=${movie}`, options)
         const data = await response.json()
         
-        console.log(movie)
         console.log(data)
         setResult(movie)
         setMovie('')
-        setFilms(data)
+        setFilms(data.Search)
+        console.log(data.Search)
+    }
     }
 
     return (
         <div>
-            <div className='mx-4 my-6'>
-                <h1 className='text-4xl text-stone-700'>Welcome!</h1>
-                <h2 className='text-2xl text-stone-500 pt-2'>Millions of movies, TV shows and people to discover. Explore now</h2>
+            <div className='py-8'>
+                <div className='flex flex-row gap-2'>
+                    <h1 className='welcome'>Welcome!</h1>
+                    <img className='popcorn' src='https://pngicon.ru/file/uploads/popcorn.png' />
+                </div>
+                <h2 className='textsmall'>Millions of movies, TV shows and people to discover. Explore now</h2>
             </div>
             <form className='form'>
                 <input 
@@ -46,7 +50,7 @@ function Form( ) {
                     placeholder='Search for a movie....( English )' />
                 <Button title='Search' handleClick={showMovies} type='submit' />
             </form>
-            <h3 className='result-text'>Search results: {result} <span className='inp-val' id='searchRes'></span></h3>
+            <h3 className='result-text'>Search results for: {result} <span className='inp-val' id='searchRes'></span></h3>
             <Content films={films} />
         </div>
     )

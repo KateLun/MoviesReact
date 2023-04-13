@@ -1,14 +1,11 @@
-//import { useState } from 'react';
 import 'components/App/App.css';
 import Form from 'components/Form';
-import Content from 'components/Content';
 
 function App() {
    return (
-        <div className='bg-indigo-300 max-h-screen'>
-            <div className='max-w-screen-lg mx-auto'>
+        <div className='background'>
+            <div className='content'>
                 <Form />
-                <Content />
             </div>
         </div>
     );
