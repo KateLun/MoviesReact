@@ -37,7 +37,7 @@ function Form( ) {
             <div className='py-8'>
                 <div className='flex flex-row gap-2'>
                     <h1 className='welcome'>Welcome!</h1>
-                    <img className='popcorn' src='https://pngicon.ru/file/uploads/popcorn.png' />
+                    <img className='popcorn' alt='' src='https://pngicon.ru/file/uploads/popcorn.png' />
                 </div>
                 <h2 className='textsmall'>Millions of movies, TV shows and people to discover. Explore now</h2>
             </div>

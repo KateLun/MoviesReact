@@ -32,7 +32,7 @@ function Content( props ) {
                 return (
                     <div className='movie_result'> 
                         <div className='movie_card' >
-                            <img className='poster' src={film.Poster} />
+                            <img className='poster' alt='' src={film.Poster} />
                             <p>{film.Title} ({film.Year})</p>
                             <Button title='Information' handleClick={showInformation} />
                         </div> 
